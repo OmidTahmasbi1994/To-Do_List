@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To Do List</title>
+    <link type="image.png" rel="icon" href="icon.png" sizes="16×16">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Omid Tahmasebi Boldaji">
+    <meta name="description" content="to do list">
+    <meta name="keywords" content="to do list , To Do List , لیست کارهای روزانه , برنامه روزانه">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>لیست کارهای من</h1>
+            <div class="inputPart">
+                <input type="text" placeholder="عمل مورد نظر را ثبت کنید" class="inputText" id="inputTxt">
+                <button class="inputButton" id="inputBtn" onclick="add()">
+                    <i class="fa-solid fa-right-to-bracket fa-rotate-180"></i>
+                </button><!-- fa-rotate-180 : turn it 180 degree in Watch Direction -->
+            </div>
+        </header>
+        
+        <main>
+            <div class="item">
+                <span>ورزش</span>
+                <button class="editJob" id="editJob" onclick=""><i class="fa-solid fa-pen"></i></button>
+                <button class="removeJob" id="removeJob" onclick=""><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+        </main>
+
+        <div id="mask"></div>
+
+    </div>
+
+</body>
+
+</html>
