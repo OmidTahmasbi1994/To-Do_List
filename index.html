@@ -21,7 +21,7 @@
         <header>
             <h1>لیست کارهای من</h1>
             <div class="inputPart">
-                <input type="text" placeholder="عمل مورد نظر را ثبت کنید" class="inputText" id="inputTxt">
+                <input type="text" class="inputText" placeholder="عمل مورد نظر را ثبت کنید" id="inputTxt">
                 <button class="inputButton" id="inputBtn" onclick="add()">
                     <i class="fa-solid fa-right-to-bracket fa-rotate-180"></i>
                 </button><!-- fa-rotate-180 : turn it 180 degree in Watch Direction -->
@@ -31,6 +31,11 @@
         <main id="main">
             <div class="item">
                 <span>ورزش</span>
+                <button class="editJob" id="editJob" onclick=""><i class="fa-solid fa-pen"></i></button>
+                <button class="removeJob" id="removeJob" onclick=""><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            <div class="item">
+                <span>مطالعه</span>
                 <button class="editJob" id="editJob" onclick=""><i class="fa-solid fa-pen"></i></button>
                 <button class="removeJob" id="removeJob" onclick=""><i class="fa-solid fa-trash-can"></i></button>
             </div>
