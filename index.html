@@ -13,6 +13,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow">
+    
+    <script>
+        
+        
+        
+
+        function add(){
+            const main = document.getElementById('main');
+            const input_text = document.getElementById('inputTxt');
+
+            const input_value = input_text.value.trim();
+            
+            if(input_value==""){
+                alert("هیچ برنامه ای رو وارد نکردی !")
+                return;
+            }
+            
+            const new_value = createNewItem(input_value);
+            main.appendChild(new_value);
+
+            input_text.value = "";
+            updateAndSave()
+        }
+
+        function createNewItem(data){
+            
+            const new_item = document.createElement('div');
+
+            const new_span = document.createElement('span');
+            new_span.textContent = data; //function's parameter//
+
+            const edit_button = document.createElement('button');
+            edit_button.onclick = function(){
+                edit_item(new_item)
+            }
+            const edit_icon = document.createElement('i');
+            edit_icon.className = "fa-solid fa-pen";
+            edit_button.appendChild(edit_icon);
+
+
+            const remove_button = document.createElement('button');
+            remove_button.onclick=function(){
+                remove_item(new_item)
+            }
+            const remove_icon = document.createElement('i');
+            remove_icon.className = "fa-solid fa-trash-can";
+            remove_button.appendChild(remove_icon);
+
+            new_item.appendChild(new_span);
+            new_item.appendChild(edit_button);
+            new_item.appendChild(remove_button);  
+            
+            return new_item;
+        }
+
+        function edit_item(item){
+        }
+
+        function remove_item(item){
+
+        }
+
+    </script>
+
 </head>
 
 <body>
@@ -21,7 +85,7 @@
         <header>
             <h1>لیست کارهای من</h1>
             <div class="inputPart">
-                <input type="text" class="inputText" placeholder="عمل مورد نظر را ثبت کنید" id="inputTxt">
+                <input type="text" id="inputTxt" class="inputText" placeholder="عمل مورد نظر را ثبت کنید">
                 <button class="inputButton" id="inputBtn" onclick="add()">
                     <i class="fa-solid fa-right-to-bracket fa-rotate-180"></i>
                 </button><!-- fa-rotate-180 : turn it 180 degree in Watch Direction -->
@@ -29,7 +93,7 @@
         </header>
         
         <main id="main">
-            <div class="item">
+            <!-- <div class="item">
                 <span>ورزش</span>
                 <button class="editJob" id="editJob" onclick=""><i class="fa-solid fa-pen"></i></button>
                 <button class="removeJob" id="removeJob" onclick=""><i class="fa-solid fa-trash-can"></i></button>
@@ -38,7 +102,7 @@
                 <span>مطالعه</span>
                 <button class="editJob" id="editJob" onclick=""><i class="fa-solid fa-pen"></i></button>
                 <button class="removeJob" id="removeJob" onclick=""><i class="fa-solid fa-trash-can"></i></button>
-            </div>
+            </div> -->
         </main>
 
         <div id="mask"></div>
