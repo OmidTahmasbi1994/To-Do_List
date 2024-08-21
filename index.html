@@ -13,23 +13,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow">
-    
-    <script>
-        
-        
-        
 
-        function add(){
+    <script>
+
+        function exitMask(){
+            const mask = document.getElementById('maskDiv');
+            mask.style.display = 'none';
+        }
+
+        function add() {
             const main = document.getElementById('main');
             const input_text = document.getElementById('inputTxt');
 
             const input_value = input_text.value.trim();
-            
-            if(input_value==""){
+
+            if (input_value == "") {
                 alert("هیچ برنامه ای رو وارد نکردی !")
                 return;
             }
-            
+
             const new_value = createNewItem(input_value);
             main.appendChild(new_value);
 
@@ -37,15 +39,15 @@
             updateAndSave()
         }
 
-        function createNewItem(data){
-            
+        function createNewItem(data) {
+
             const new_item = document.createElement('div');
 
             const new_span = document.createElement('span');
             new_span.textContent = data; //function's parameter//
 
             const edit_button = document.createElement('button');
-            edit_button.onclick = function(){
+            edit_button.onclick = function () {
                 edit_item(new_item)
             }
             const edit_icon = document.createElement('i');
@@ -54,7 +56,7 @@
 
 
             const remove_button = document.createElement('button');
-            remove_button.onclick=function(){
+            remove_button.onclick = function () {
                 remove_item(new_item)
             }
             const remove_icon = document.createElement('i');
@@ -63,15 +65,15 @@
 
             new_item.appendChild(new_span);
             new_item.appendChild(edit_button);
-            new_item.appendChild(remove_button);  
-            
+            new_item.appendChild(remove_button);
+
             return new_item;
         }
 
-        function edit_item(item){
+        function edit_item(item) {
         }
 
-        function remove_item(item){
+        function remove_item(item) {
 
         }
 
@@ -91,24 +93,34 @@
                 </button><!-- fa-rotate-180 : turn it 180 degree in Watch Direction -->
             </div>
         </header>
-        
+
         <main id="main">
-            <!-- <div class="item">
-                <span>ورزش</span>
-                <button class="editJob" id="editJob" onclick=""><i class="fa-solid fa-pen"></i></button>
-                <button class="removeJob" id="removeJob" onclick=""><i class="fa-solid fa-trash-can"></i></button>
-            </div>
-            <div class="item">
-                <span>مطالعه</span>
-                <button class="editJob" id="editJob" onclick=""><i class="fa-solid fa-pen"></i></button>
-                <button class="removeJob" id="removeJob" onclick=""><i class="fa-solid fa-trash-can"></i></button>
-            </div> -->
+            
         </main>
 
-        <div id="mask"></div>
+    </div>
 
+    <div class="mask" id="maskDiv">
+        <div class="maskContainer">
+            <div class="maskTop">
+                <button class="maskButton" id="maskBtn" onclick="exitMask()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="maskBottom">
+                <span class="maskText">
+                    سلام من امید طهماسبی ام. دانشجوی سال آخر مهندسی کامپیوتر. این وبسایت در اصل یه پروژۀ دانشجویی بود اما بعداً تصمیم گرفتم 
+                    یجوری باشه که هر کسی بتونه ازش استفاده کنه.
+                    </br></br>
+                    اینجا میتونی برنامۀ های روزانت رو با همۀ جزئیاتش ثبت کنی. این برنامه طوری طراحی شده
+                    که اطلاعات کاربر توی حافظۀ مرورگر ذخیره میشه پس برنامه هایی که اینجا ثبتشون می کنی هیچوقت پاک نمیشن. 
+                    </br></br>
+                    « موفق باشی » 
+                </span>
+            </div>
+        </div> 
     </div>
 
 </body>
 
 </html>
+
+<!-- fa-regular fa-circle-xmark -->

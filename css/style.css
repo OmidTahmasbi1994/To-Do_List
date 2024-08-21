@@ -39,10 +39,70 @@ body
 {
     direction: rtl;
 }
+.mask
+{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+.maskContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+}
+.maskTop
+{
+    width: 50%;
+    height: 40px;
+    align-content: center;
+}
+.maskButton
+{
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(to right , rgb(96, 0, 199) , rgb(110, 6, 255));
+    color: rgb(239,239,239);
+    font-size: 22px;
+    font-weight: 900;
+    border: none;
+    border-radius: 100%;
+}
+.maskButton:hover
+{
+    transform: scale(0.9);
+    transition: 0.2s;
+    font-size: 21px;
+    background: linear-gradient(to right , rgb(96, 0, 199) , rgb(110, 6, 255));
+    color: rgb(239,239,239);
+    cursor: pointer
+}
+.maskBottom
+{
+    width: 50%;
+    height: 200px;
+    margin-top: 10px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right , rgb(50, 0, 104) , rgb(110, 6, 255));
+    
+}
+.maskBottom span
+{
+    color: rgb(239,239,239);
+    font-size: 20px;
+}
 .container
 {
     width: 100%;
     height: 100vh;
+    z-index: 1;
     background: linear-gradient(to right , rgb(50, 0, 104) , rgb(110, 6, 255));
 }
 header
@@ -71,6 +131,11 @@ header h1
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
+    color: black;
+    background: rgb(239,239,239);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; 
 }
 .inputButton
 {
@@ -166,6 +231,63 @@ main div button:active
     {
         direction: rtl;
     }
+    .mask
+    {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .maskContainer
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 150px;
+    }
+    .maskTop
+    {
+        width: 90%;
+        height: 40px;
+        align-content: center;
+    }
+    .maskButton
+    {
+        width: 25px;
+        height: 25px;
+        background: linear-gradient(to right , rgb(96, 0, 199) , rgb(110, 6, 255));
+        color: rgb(239,239,239);
+        font-size: 15px;
+        font-weight: 900;
+        border: none;
+        border-radius: 100%;
+    }
+    .maskButton:hover
+    {
+        transform: scale(1);
+        font-size: 15px;
+        background: linear-gradient(to right , rgb(96, 0, 199) , rgb(110, 6, 255));
+        color: rgb(239,239,239);
+    }
+    .maskBottom
+    {
+        width: 80%;
+        height: 180px;
+        margin-top: 1px;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(to right , rgb(50, 0, 104) , rgb(110, 6, 255));
+        
+    }
+    .maskBottom span
+    {
+        color: rgb(239,239,239);
+        font-size: 11px;
+    }
     .container
     {
         width: 100%;
@@ -198,6 +320,11 @@ main div button:active
         padding-top: 5px;
         padding-bottom: 5px;
         padding-right: 5px;
+        color: black;
+        background: rgb(239,239,239);
+        font-size: 11px;
+        border: none;
+        border-radius: 5px;
     }
     .inputButton
     {
