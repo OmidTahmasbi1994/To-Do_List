@@ -10,7 +10,7 @@ function add() {
     const input_value = input_text.value.trim();
 
     if (input_value == "") {
-        alert("هیچ برنامه ای رو وارد نکردی !")
+        alert("هیچ یادداشتی رو وارد نکردی !")
         return;
     }
 
@@ -56,9 +56,9 @@ function createNewItem(data) {
 
 function edit_item(item) {
     const target_span = item.querySelector('span');
-    const new_data = prompt("اینجا عنوان برنامت رو تغییر بده :" , target_span.textContent);
+    const new_data = prompt("ویرایش یادداشت :" , target_span.textContent);
     if(new_data==null || new_data=="")
-        alert("عنوان جدیدی اضافه نشد !");
+        alert("یادداشت جدیدی اضافه نشد !");
     else
         target_span.textContent = new_data;
 
